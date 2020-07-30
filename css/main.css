@@ -422,6 +422,7 @@ header {
 	font-family: 'Montserrat-Bold';
 	text-transform: uppercase;
 	position: relative;
+	cursor: pointer;
 }
 .consultation-card__link:after  {
 	content: "";
@@ -685,7 +686,7 @@ footer {
 		-ms-flex-align: center;
 		align-items: center;
 		padding: 20px 0;
-		width: 340px;
+		width: 100%;
 	}
 	.hamburger-icon-wrapper {
 		top: 0;
@@ -805,7 +806,15 @@ footer {
 		display: block;
 	}
 	.no-padding {
-		padding: 0;
+		padding-left: 0;
+		padding-right: 0;
+	}
+	.no-mg {
+		margin: 0;
+	}
+	.no-margin  > .col, .no-margin  > [class*="col-"] {
+		padding-right: 0;
+		padding-left: 0;
 	}
 	.about-card {
 		margin-bottom: 0;

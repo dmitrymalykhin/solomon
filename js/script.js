@@ -19,34 +19,21 @@ function openBurger () {
 //End burger
 
 
-let elements = $('.modal-overlay, .modal');
-
 $('.open-modal').click(function(){
-	elements.addClass('active');
+let modalEl = $(this).data('modal');
+$('div[data-modal="'+modalEl+'"]').addClass('active');
+$('div[data-modal="'+modalEl+'"]').find('.modal').addClass('active');
 });
 
 $('.close-modal').click(function(){
-	elements.removeClass('active');
+$(this).parents('.modal').removeClass('active');
+$(this).parents('.modal-overlay').removeClass('active');
 });
 $(document).click(function (e) {
-	if ($(e.target).is('.modal-overlay, .modal')) {
-		elements.removeClass('active');
-	}
-});
-
-let elements2 = $('.modal-overlay2, .modal2');
-
-$('.open-modal2').click(function(){
-	elements2.addClass('active');
-});
-
-$('.close-modal2').click(function(){
-	elements2.removeClass('active');
-});
-$(document).click(function (e) {
-	if ($(e.target).is('.modal-overlay2, .modal2')) {
-		elements2.removeClass('active');
-	}
+if ($(e.target).is('.modal-overlay')) {
+$(e.target).removeClass('active');
+$(e.target).find('.modal').removeClass('active');
+}
 });
 
 

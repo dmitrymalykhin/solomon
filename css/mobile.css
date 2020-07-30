@@ -37,7 +37,7 @@ background: #000;}
 	z-index: 9;
 	top: 0;
   right: 0;
-  padding: 20px 25px 25px 10px;
+  padding: 20px;
 }
 .hamburger-active .hamburger-menu {
 	left: 0;

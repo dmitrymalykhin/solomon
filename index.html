@@ -49,7 +49,7 @@
 						8 (960) 593-5555
 					</a>
 				</div>
-				<div class="open-modal btn-call">
+				<div class="open-modal btn-call" data-modal="call">
 					Заказать звонок
 				</div>
 			</div>
@@ -85,7 +85,7 @@
 								<img src="image/phone(1).svg" alt="" class="m-phone-link-img">
 								8 (960) 593-5555
 							</a>
-							<div class="m-btn-call open-modal">
+							<div class="m-btn-call open-modal" data-modal="call">
 								Заказать звонок
 							</div>
 						</div>
@@ -110,7 +110,7 @@
 						<p class="text-block2">
 							Диффиренциальная диагностика
 						</p>
-						<div class="open-modal2 btn-call2">ОСТАВИТЬ ЗАЯВКУ</div>		
+						<div class="open-modal btn-call2" data-modal="1">ОСТАВИТЬ ЗАЯВКУ</div>		
 					</div>
 				</div>
 			</div>
@@ -122,7 +122,7 @@
 				</h2>
 			</div>
 			<div class="container no-padding">
-				<div class="row">
+				<div class="row no-margin no-mg">
 					<div class="col-lg-4">
 						<h2 class="title-h2">
 							Это про вас?
@@ -217,7 +217,7 @@
 							<div class="consultation-card__title">
 								Очная консультация
 							</div>
-							<div class="consultation-card__link open-modal2">оставить заявку</div>
+							<div class="consultation-card__link open-modal" data-modal="form">оставить заявку</div>
 						</div>
 					</div>
 					<div class="col-lg-4">
@@ -229,7 +229,7 @@
 								Консультация по
 								скайп, зум, ватсап
 							</div>
-							<div class="consultation-card__link open-modal2">оставить заявку</div>
+							<div class="consultation-card__link open-modal" data-modal="form">оставить заявку</div>
 						</div>
 					</div>
 					<div class="col-lg-4">
@@ -241,7 +241,7 @@
 								Консультация по
 								Е-мейл
 							</div>
-							<div class="consultation-card__link open-modal2">оставить заявку</div>
+							<div class="consultation-card__link open-modal" data-modal="form">оставить заявку</div>
 						</div>
 					</div>
 				</div>
@@ -402,7 +402,7 @@
 							</span>
 							8 (960) 593-5555
 						</a>
-						<div class="open-modal footer-btn">
+						<div class="open-modal footer-btn" data-modal="call">
 							Заказать звонок
 						</div>
 					</div>
@@ -417,56 +417,77 @@
 		</div>
 	</footer>
 
-	<div class="modal-overlay">
-			<div class="modal">
-						<div class="container">
-				<div class="modal-content">
-					<a class="close-modal">
-						<svg viewBox="0 0 20 20">
-							<path fill="#8292a1" d="M15.898,4.045c-0.271-0.272-0.713-0.272-0.986,0l-4.71,4.711L5.493,4.045c-0.272-0.272-0.714-0.272-0.986,0s-0.272,0.714,0,0.986l4.709,4.711l-4.71,4.711c-0.272,0.271-0.272,0.713,0,0.986c0.136,0.136,0.314,0.203,0.492,0.203c0.179,0,0.357-0.067,0.493-0.203l4.711-4.711l4.71,4.711c0.137,0.136,0.314,0.203,0.494,0.203c0.178,0,0.355-0.067,0.492-0.203c0.273-0.273,0.273-0.715,0-0.986l-4.711-4.711l4.711-4.711C16.172,4.759,16.172,4.317,15.898,4.045z"></path>
-						</svg>
-					</a>
-					<form class="call-form" action="">
-						<div class="title-h4">Заказать звонок</div>
-						<p class="call-text">Я всегда рад ответить на любой Ваш вопрос</p>
+	<div class="modal-overlay" data-modal="call">
+		<div class="modal">
+			<a class="close-modal">
+				<svg viewBox="0 0 20 20">
+					<path fill="#8292a1" d="M15.898,4.045c-0.271-0.272-0.713-0.272-0.986,0l-4.71,4.711L5.493,4.045c-0.272-0.272-0.714-0.272-0.986,0s-0.272,0.714,0,0.986l4.709,4.711l-4.71,4.711c-0.272,0.271-0.272,0.713,0,0.986c0.136,0.136,0.314,0.203,0.492,0.203c0.179,0,0.357-0.067,0.493-0.203l4.711-4.711l4.71,4.711c0.137,0.136,0.314,0.203,0.494,0.203c0.178,0,0.355-0.067,0.492-0.203c0.273-0.273,0.273-0.715,0-0.986l-4.711-4.711l4.711-4.711C16.172,4.759,16.172,4.317,15.898,4.045z"></path>
+				</svg>
+			</a>
+			<div class="modal-content">
+				<form class="call-form" action="">
+					<div class="title-h4">Заказать звонок</div>
+					<p class="call-text">Я всегда рад ответить на любой Ваш вопрос</p>
+					<div class="input-block">
 						<span class="call-form-user"></span>
 						<input class="call-form-name" type="text" placeholder="Имя">
-						<input class="call-form-phone" type="tel" placeholder="Телефон">
+					</div>
+					<div class="input-block">
 						<span class="call-form-phone-icon"></span>
-						<button class="call-form-button-send">заказать звонок</button>
-						<p class="conf">Нажимая на кнопку "Отправить", Вы соглашаетесь с <a href="">правилами на
-						обработку персональных данных</a></p>
-					</form>
-				</div>
+						<input class="call-form-phone" type="tel" placeholder="Телефон">
+					</div>
+					<button class="call-form-button-send">заказать звонок</button>
+					<p class="conf">Нажимая на кнопку "Отправить", Вы соглашаетесь с <a href="">правилами на
+					обработку персональных данных</a></p>
+				</form>
 			</div>
 		</div>
 	</div>
 
-		<div class="modal-overlay modal-overlay2">
-
-			<div class="modal modal2">
-						<div class="container">
-				<div class="modal-content">
-					<a class="close-modal">
-						<svg viewBox="0 0 20 20">
-							<path fill="#8292a1" d="M15.898,4.045c-0.271-0.272-0.713-0.272-0.986,0l-4.71,4.711L5.493,4.045c-0.272-0.272-0.714-0.272-0.986,0s-0.272,0.714,0,0.986l4.709,4.711l-4.71,4.711c-0.272,0.271-0.272,0.713,0,0.986c0.136,0.136,0.314,0.203,0.492,0.203c0.179,0,0.357-0.067,0.493-0.203l4.711-4.711l4.71,4.711c0.137,0.136,0.314,0.203,0.494,0.203c0.178,0,0.355-0.067,0.492-0.203c0.273-0.273,0.273-0.715,0-0.986l-4.711-4.711l4.711-4.711C16.172,4.759,16.172,4.317,15.898,4.045z"></path>
-						</svg>
-					</a>
-					<form class="call-form form-2" action="">
-						<div class="title-h4">Оставить заявку</div>
-						<p class="call-text">Я всегда рад ответить на любой Ваш вопрос</p>
+	<div class="modal-overlay modal-overlay2" data-modal="form">
+		<div class="modal modal2">
+			<a class="close-modal">
+				<svg viewBox="0 0 20 20">
+					<path fill="#8292a1" d="M15.898,4.045c-0.271-0.272-0.713-0.272-0.986,0l-4.71,4.711L5.493,4.045c-0.272-0.272-0.714-0.272-0.986,0s-0.272,0.714,0,0.986l4.709,4.711l-4.71,4.711c-0.272,0.271-0.272,0.713,0,0.986c0.136,0.136,0.314,0.203,0.492,0.203c0.179,0,0.357-0.067,0.493-0.203l4.711-4.711l4.71,4.711c0.137,0.136,0.314,0.203,0.494,0.203c0.178,0,0.355-0.067,0.492-0.203c0.273-0.273,0.273-0.715,0-0.986l-4.711-4.711l4.711-4.711C16.172,4.759,16.172,4.317,15.898,4.045z"></path>
+				</svg>
+			</a>
+			<div class="modal-content">
+				<form class="call-form form-2" action="">
+					<div class="title-h4">Оставить заявку</div>
+					<p class="call-text">Я всегда рад ответить на любой Ваш вопрос</p>
+					<div class="input-block">
 						<span class="call-form-user"></span>
 						<input class="call-form-name" type="text" placeholder="Имя">
-						<input class="call-form-phone" type="tel" placeholder="Телефон">
+					</div>
+					<div class="input-block">
 						<span class="call-form-phone-icon"></span>
-												<input class="call-form-mail" type="mail" placeholder="Е-мэйл">
+						<input class="call-form-phone" type="tel" placeholder="Телефон">
+					</div>
+					<div class="input-block">
 						<span class="call-form-mail-icon"></span>
-						<textarea name="" id="" cols="30" rows="10" placeholder="ЧТО ВАС БЕСПОКОИТ (КРАТКО, ОСНОВНЫЕ МОМЕНТЫ)"></textarea>
-						<button class="call-form-button-send">Отправить</button>
-						<p class="conf">Нажимая на кнопку "Отправить", Вы соглашаетесь с <a href="">правилами на
-						обработку персональных данных</a></p>
-					</form>
-				</div>
+						<input class="call-form-mail" type="mail" placeholder="Е-мэйл">
+					</div>
+					<textarea name="" id="" cols="30" rows="10" placeholder="ЧТО ВАС БЕСПОКОИТ (КРАТКО, ОСНОВНЫЕ МОМЕНТЫ)"></textarea>
+					<button class="call-form-button-send">Отправить</button>
+					<p class="conf">Нажимая на кнопку "Отправить", Вы соглашаетесь с <a href="">правилами на
+					обработку персональных данных</a></p>
+				</form>
+			</div>
+		</div>
+	</div>
+
+		<div class="modal-overlay" data-modal="1">
+		<div class="modal sp-modal">
+			<a class="close-modal">
+				<svg viewBox="0 0 20 20">
+					<path fill="#8292a1" d="M15.898,4.045c-0.271-0.272-0.713-0.272-0.986,0l-4.71,4.711L5.493,4.045c-0.272-0.272-0.714-0.272-0.986,0s-0.272,0.714,0,0.986l4.709,4.711l-4.71,4.711c-0.272,0.271-0.272,0.713,0,0.986c0.136,0.136,0.314,0.203,0.492,0.203c0.179,0,0.357-0.067,0.493-0.203l4.711-4.711l4.71,4.711c0.137,0.136,0.314,0.203,0.494,0.203c0.178,0,0.355-0.067,0.492-0.203c0.273-0.273,0.273-0.715,0-0.986l-4.711-4.711l4.711-4.711C16.172,4.759,16.172,4.317,15.898,4.045z"></path>
+				</svg>
+			</a>
+			<div class="modal-content">
+					<div class="sp-title-h4">Спасибо!</div>
+				  <p class="sp-text">Ваша заявка принята.</p>
+					<p class="sp-text2">Я свяжусь с вами в самое ближайшее время</p>
+					<div class="close-modal sp-btn">ок</div>
 			</div>
 		</div>
 	</div>
